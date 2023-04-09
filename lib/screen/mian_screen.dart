@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:mainlogo/screen/login_page.dart';
 
@@ -59,9 +60,25 @@ class Mainpage extends StatelessWidget {
       ),
 
     //  위는 AppBar
-      body: Column(
+    //  아래는 NaviBar
 
-      ),
+     bottomNavigationBar: CurvedNavigationBar(
+       backgroundColor: Colors.greenAccent,
+       color: Colors.white,
+       animationDuration: Duration(milliseconds: 300),
+       onTap: (index) {
+         print(index);
+       },
+       items: [
+         Icon(Icons.map),
+         Icon(Icons.sports_baseball),
+         Image.asset('assets/sporting.png', color: Colors.black,),
+         Icon(Icons.mail),
+         Icon(Icons.person),
+       ],
+     ),
+      //
+
 
     );
   }
